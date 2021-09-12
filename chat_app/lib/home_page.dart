@@ -23,14 +23,16 @@ class _HomePageState extends State<HomePage> {
               child: TextField(
                 controller: _textEditingController,
                 decoration: InputDecoration(hintText: "Send a message"),
+                onSubmitted: _handleSubmitted,
               ),
             ),
             SizedBox(
               width: 8.0,
             ),
+            // ignore: deprecated_member_use
             FlatButton(
               onPressed: () {
-                print(_textEditingController.text);
+                _handleSubmitted(_textEditingController.text);
               },
               child: Text("Send"),
               color: Colors.amberAccent,
@@ -39,5 +41,10 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
     );
+  }
+
+  void _handleSubmitted(String text) {
+    print(text);
+    _textEditingController.clear();
   }
 }
