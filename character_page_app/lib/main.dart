@@ -28,8 +28,17 @@ class Grade extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CircleAvatar(
-              backgroundImage: AssetImage('assets/pikachu.gif'),
+            Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage('assets/pikachu.jpg'),
+                radius: 60.0,
+              ),
+            ),
+            Divider(
+              height: 60.0,
+              color: Colors.grey[850],
+              thickness: 0.5,
+              endIndent: 30.0,
             ),
             Text(
               'NAME',
@@ -118,6 +127,11 @@ class Grade extends StatelessWidget {
                 )
               ],
             ),
+            Center(
+                child: CircleAvatar(
+              backgroundImage: AssetImage('assets/pikachu1.png'),
+              radius: 40.0,
+            )),
           ],
         ),
       ),
