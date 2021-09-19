@@ -6,6 +6,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Pikachu',
       home: Grade(),
     );
@@ -35,7 +36,7 @@ class Grade extends StatelessWidget {
               ),
             ),
             Divider(
-              height: 60.0,
+              height: 60.0, // from image 30 and NAME 30
               color: Colors.grey[850],
               thickness: 0.5,
               endIndent: 30.0,
@@ -124,14 +125,16 @@ class Grade extends StatelessWidget {
                     fontSize: 16.0,
                     letterSpacing: 1.0,
                   ),
-                )
+                ),
               ],
             ),
             Center(
-                child: CircleAvatar(
-              backgroundImage: AssetImage('assets/pikachu1.png'),
-              radius: 40.0,
-            )),
+              child: CircleAvatar(
+                backgroundImage: AssetImage('assets/pikachu1.png'),
+                radius: 40.0,
+                backgroundColor: Colors.amber[600],
+              ),
+            )
           ],
         ),
       ),
