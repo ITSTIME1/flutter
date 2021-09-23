@@ -69,6 +69,12 @@ class MyPage extends StatelessWidget {
               currentAccountPicture: CircleAvatar(
                 backgroundImage: AssetImage('lib/assets/useraccout.png'),
               ),
+              otherAccountsPictures: [
+                CircleAvatar(
+                  backgroundImage: AssetImage('lib/assets/useraccout.png'),
+                  backgroundColor: Colors.white,
+                ),
+              ],
               accountName: Text('ITSTIME'),
               accountEmail: Text('itstime0809@gmail.com'),
               onDetailsPressed: () {
@@ -80,6 +86,39 @@ class MyPage extends StatelessWidget {
                     bottomLeft: Radius.circular(40.0),
                     bottomRight: Radius.circular(40.0)),
               ),
+            ),
+            ListTile(
+              leading: Icon(Icons.home, color: Colors.grey[850]),
+              title: Text('Home'),
+              onTap: () {
+                print("Home pressed");
+              },
+              trailing: Icon(Icons.add),
+            ),
+            ListTile(
+              leading:
+                  Icon(Icons.settings_applications, color: Colors.grey[850]),
+              title: Text('Setting'),
+              onTap: () {
+                print("Setting pressed");
+              },
+              trailing: Icon(Icons.add),
+            ),
+            ListTile(
+              leading: Icon(Icons.contact_phone, color: Colors.grey[850]),
+              title: Text('Contact'),
+              onTap: () {
+                print("Contact pressed");
+              },
+              trailing: Icon(Icons.add),
+            ),
+            ListTile(
+              leading: Icon(Icons.question_answer, color: Colors.grey[850]),
+              title: Text('Q&A'),
+              onTap: () {
+                print("Q&A pressed");
+              },
+              trailing: Icon(Icons.add),
             ),
           ],
         ),
