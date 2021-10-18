@@ -1,16 +1,25 @@
 # character_page_app
 
-A new Flutter project.
+This proejct poketpon GUI project!
 
-## Getting Started
+# Why you Started project
 
-This project is a starting point for a Flutter application.
+Suddenly, I want to make **"Poketmon book"** so that I recklessly began to build **a static page** for Poketmon.
 
-A few resources to get you started if this is your first Flutter project:
+# Image
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+<img src="https://user-images.githubusercontent.com/88642524/135743314-cc744918-d901-48a5-b326-71f3c470d503.png" align="center"/>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# How to download
+
+You have to download "flutter" repositories.
+
+# What kind of technique did you use?
+* CircleAvatar
+* Divider
+* AssetImage
+* SizedBox
+* Text
+* Row
+* Center
+* Icon

@@ -1,16 +1,15 @@
-# login_app
+# Login_app
 
-A new Flutter project.
+This project Login_page_practice_app!
 
-## Getting Started
+# Why you Started project
 
-This project is a starting point for a Flutter application.
+I thought that what are the basic functions used in flutter app?
+then I suddenly remembered the login function!
+so i decided to make this project!
 
-A few resources to get you started if this is your first Flutter project:
+# Image(Before & after)
+<img src="https://user-images.githubusercontent.com/88642524/135743127-594a81c8-3b4d-475d-97c6-a08a9663d2b0.png" width="30%" height="30%"/> <img src="https://user-images.githubusercontent.com/88642524/135743155-e07aaa1a-886c-426f-afd6-161e14678901.png" width="30%" height="30%"/> <img src="https://user-images.githubusercontent.com/88642524/135743163-be9ab850-93a4-4857-885d-2c1ea28670a4.png" width="30%" height="30%"/>
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# How to download 
+You have to "flutter" repositories then you download.zip click!

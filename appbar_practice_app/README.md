@@ -1,16 +1,22 @@
 # appbar_practice_app
 
-A new Flutter project.
+This proejct basic **appbar_project**!
 
-## Getting Started
+# Why you Started project
 
-This project is a starting point for a Flutter application.
+I started making it because i wanted to make the screen shown on the first page!
 
-A few resources to get you started if this is your first Flutter project:
+# Image
+<img src="https://user-images.githubusercontent.com/88642524/135743617-becdf649-e82f-408b-8eba-c4f190240edd.png"/>
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# What kind of technique did you use?
+* toolbarHeight
+* decoration
+* gradient
+* begin
+* end
+* Iconbutton
+* onPressed
+* drawer
+* ListView
+* UserAccoutsDrawerHeader

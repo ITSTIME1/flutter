@@ -1,16 +1,15 @@
-# snackbar_app
+# Snackbar_app
 
-A new Flutter project.
+This project **"flutter snack bar project"**
 
-## Getting Started
+# Why you Started project
 
 This project is a starting point for a Flutter application.
+we often use the **"snack bar function"** to deliver message for client. 
+so I decided to make this snack bar practice project.
 
-A few resources to get you started if this is your first Flutter project:
+# Image (Before & after)
+<img src="https://user-images.githubusercontent.com/88642524/135742596-2ac99a8f-c167-46e8-bac3-94b2a7daf983.png" width="40%" height="40%"/> <img src="https://user-images.githubusercontent.com/88642524/135742819-b908860a-d8bd-46d9-9a15-bbfccd8695cd.png" width="40%" height="40%"/>
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# How to download
+You have to "flutter" repositories download.zip click!
