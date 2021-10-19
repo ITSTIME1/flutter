@@ -1,6 +1,6 @@
 import 'dart:async';
+import 'Onboardingscreen.dart';
 import 'package:flutter/widgets.dart';
-import 'LogInscreen.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -32,9 +32,9 @@ class _SplashScreenState extends State<SplashScreen> {
     // 3초 뒤에 LogIn 페이지로 넘어감
     // After 3seconds move on LogIn Page
     Timer(
-        Duration(seconds: 0),
-        () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => LogInscreen())));
+        Duration(seconds: 5),
+        () => Navigator.pushReplacement(context,
+            MaterialPageRoute(builder: (context) => Onboardingscreen())));
   }
 
   Widget build(BuildContext context) {
@@ -47,8 +47,8 @@ class _SplashScreenState extends State<SplashScreen> {
             begin: Alignment.topRight,
             end: Alignment.bottomLeft,
             colors: [
-              const Color(0xFFA5D6A7),
-              const Color(0xFF1B5E20),
+              const Color(0xFF9CCC65),
+              const Color(0xFF8BC34A),
             ],
           ),
         ),
@@ -58,14 +58,15 @@ class _SplashScreenState extends State<SplashScreen> {
             children: [
               Column(
                 children: [
-                  CircleAvatar(
-                    backgroundImage: AssetImage(
-                      'lib/images/vagitable.jpg',
+                  Center(
+                    child: Image(
+                      image: AssetImage(
+                        'lib/images/forest.png',
+                      ),
                     ),
-                    radius: 80,
                   ),
                   SizedBox(
-                    height: 200.0,
+                    height: 100.0,
                   ),
                   CircularProgressIndicator(
                     valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
