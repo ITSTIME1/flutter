@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter/widgets.dart';
 
 class Onboardingscreen extends StatefulWidget {
   @override
@@ -7,14 +8,14 @@ class Onboardingscreen extends StatefulWidget {
 }
 
 class _OnboardingscreenState extends State<Onboardingscreen> {
-  final int _numPage = 3;
+  final int _numPages = 3; // 최대 페이지 수는 3
   final PageController _pageController = PageController(initialPage: 0);
   int _currentPage = 0;
 
-  // 페이지 리스트들을 추가해줌.
+  // 인디케이터 페이지를 추가해줌.
   List<Widget> _buildPageIndicator() {
     List<Widget> list = [];
-    for (int i = 0; i < _numPage; i++) {
+    for (int i = 0; i < _numPages; i++) {
       list.add(i == _currentPage ? _indicator(true) : _indicator(false));
     }
     return list;
@@ -136,11 +137,71 @@ class _OnboardingscreenState extends State<Onboardingscreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: _buildPageIndicator(), // indicator 생성
                 ),
+                _currentPage != _numPages - 1
+                    ? Expanded(
+                        child: Align(
+                          alignment: FractionalOffset.bottomRight,
+                          child: FlatButton(
+                            onPressed: () {
+                              _pageController.nextPage(
+                                duration: Duration(milliseconds: 500),
+                                curve: Curves.ease,
+                              );
+                            },
+                            child: Row(
+                              mainAxisAlignment:
+                                  MainAxisAlignment.center, // 가운데 정렬
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text(
+                                  'Next',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 22.0,
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 10.0,
+                                ), // width height
+                                Icon(
+                                  Icons.arrow_forward,
+                                  color: Colors.white,
+                                  size: 30.0,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      )
+                    : Text(''),
               ], // 세로 영역을 다쓴다.
             ),
           ),
         ),
       ),
+      bottomSheet: _currentPage == _numPages - 1
+          ? Container(
+              height: 100.0,
+              width: double.infinity,
+              color: Colors.white,
+              child: GestureDetector(
+                onTap: () => print('Get started'),
+                child: Center(
+                  child: Padding(
+                    padding: EdgeInsets.only(bottom: 30.0),
+                    child: Text(
+                      'Get started',
+                      style: TextStyle(
+                        color: Color(0xFF5B16D0),
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            )
+          : Text(''),
     );
   }
 }

@@ -54,7 +54,7 @@ class _SplashScreenState extends State<SplashScreen> {
         ),
         child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center, // 이게 있을 필요가 있나?
             children: [
               Column(
                 children: [
