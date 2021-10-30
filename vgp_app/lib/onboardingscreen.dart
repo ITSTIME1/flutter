@@ -14,7 +14,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-
     return Scaffold(
       body: PageView(
         controller: _controller,
@@ -41,7 +40,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           //1. 이 앱의 목적
           OnboardingScreenItems(
             imagepath: 'lib/images/img1.png',
-            color: Colors.white,
+            color: Colors.white10,
             title: "'우리는 이렇게 사용해요'",
             subtitle:
                 "'VGP'는 'Very Growth People'의 약자로 \n                      '매우 성장하는' \n  사람들이란 의미를 내포하고 있습니다.",
@@ -64,7 +63,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           ),
         ],
       ),
-      // 첫번째 container 는 currentindex == 2 마지막 페이지 작업 코드
+      // True == currentIndex == LastPage == currentIndex == 2
       bottomNavigationBar: currentIndex == 2
           ? Container(
               height: size.height / 10,
@@ -92,7 +91,16 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           : Container(
               height: size.height / 14,
               width: size.width,
-              color: currentIndex == 0 ? Colors.green : Colors.orange,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  colors: [
+                    Color(0xFFA5D6A7), //
+                    Color(0xFF81C784),
+                  ],
+                ),
+              ),
               child: Row(
                 children: [
                   SizedBox(
@@ -110,9 +118,47 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       ),
                     ),
                   ),
+                  SizedBox(
+                    width: size.width / 4.5,
+                  ),
+                  for (int i = 0; i <= 2; i++)
+                    i == currentIndex ? buildCircle(true) : buildCircle(false),
+                  SizedBox(
+                    width: size.width / 4.5,
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: FlatButton(
+                      onPressed: () => print('성공'),
+                      child: Text(
+                        '다음',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
+    );
+  }
+
+  // 원모양 buildcircle widget
+  Widget buildCircle(bool isActive) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: AnimatedContainer(
+        duration: Duration(milliseconds: 150),
+        height: isActive ? 12 : 8,
+        width: isActive ? 12 : 8,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.all(
+            Radius.circular(50),
+          ),
+        ),
+      ),
     );
   }
 }
@@ -139,17 +185,17 @@ class OnboardingScreenItems extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(
-            height: size.height / 10,
+            height: size.height / 8,
           ),
 
           // image section
           Container(
-            height: size.height / 2,
+            height: size.height / 2.5,
             width: size.width,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(imagepath),
-                fit: BoxFit.cover,
+                fit: BoxFit.none,
               ),
             ),
           ),
