@@ -24,10 +24,10 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(
+    /*Timer(
         Duration(seconds: 0),
         () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => Onboardingscreen())));
+            MaterialPageRoute(builder: (context) => Onboardingscreen()))); */
   }
 
   Widget build(BuildContext context) {
@@ -48,7 +48,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 'Fresh',
                 style: TextStyle(
                   fontSize: 100,
-                  fontFamily: 'impact', // free font 'Impact'
+                  fontFamily: 'BebasNeue-Regular', // free font 'Impact'
                   shadows: [
                     Shadow(
                       color: Colors.black.withOpacity(0.2),
